@@ -1,0 +1,21 @@
+[package]
+name = "minillm-core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "minillm_core"
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+pyo3 = { version = "0.20", features = ["extension-module"] }
+ndarray = { version = "0.15", features = ["rayon"] }
+rayon = "1.8"
+memmap2 = "0.9"
+half = "2.3"  # f16 support
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"

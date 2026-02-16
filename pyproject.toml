@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-rust>=1.5"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minillm"
+version = "0.1.0"
+description = "Fast inference engine for transformer models"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "MiniLLM Team"},
+]
+keywords = ["llm", "inference", "transformers", "fast", "quantization"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Rust",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.24",
+    "torch>=2.0",
+    "safetensors>=0.4",
+    "huggingface-hub>=0.19",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black",
+    "mypy",
+    "ruff",
+]
+
+[project.urls]
+Homepage = "https://github.com/GaoYusong/minillm"
+Repository = "https://github.com/GaoYusong/minillm"
+Documentation = "https://github.com/GaoYusong/minillm#readme"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["minillm*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
