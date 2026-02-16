@@ -1,0 +1,10 @@
+numpy>=1.24
+torch>=2.0
+safetensors>=0.4
+huggingface-hub>=0.19
+
+[dev]
+pytest>=7.0
+black
+mypy
+ruff
