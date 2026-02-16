@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-02-17T02:59:24.623513",
+  "tests": [
+    {
+      "name": "Config creation",
+      "status": "FAIL",
+      "error": "No module named 'torch'"
+    },
+    {
+      "name": "Model structure",
+      "status": "PASS",
+      "note": "PyTorch not installed"
+    },
+    {
+      "name": "KVCache",
+      "status": "FAIL",
+      "error": "No module named 'torch'"
+    },
+    {
+      "name": "Weight loading",
+      "status": "FAIL",
+      "error": "No module named 'torch'"
+    },
+    {
+      "name": "Quantization",
+      "status": "FAIL",
+      "error": "No module named 'torch'"
+    },
+    {
+      "name": "Rust extensions",
+      "status": "SKIP",
+      "note": "Not built"
+    }
+  ],
+  "passed": 1,
+  "failed": 4
+}
