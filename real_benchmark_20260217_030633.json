@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-02-17T03:06:32.137729",
+  "device": "cpu",
+  "torch_version": "2.10.0+cpu",
+  "cuda_available": false,
+  "model_config": {
+    "vocab_size": 1000,
+    "hidden_size": 256,
+    "num_layers": 4,
+    "num_heads": 4,
+    "total_params": 2879744
+  },
+  "tests": {
+    "Short (64)": {
+      "seq_len": 64,
+      "avg_time_ms": 5.386900901794434,
+      "min_time_ms": 5.232334136962891,
+      "max_time_ms": 5.737543106079102,
+      "tokens_per_sec": 11880.671496793439
+    },
+    "Medium (256)": {
+      "seq_len": 256,
+      "avg_time_ms": 25.572896003723145,
+      "min_time_ms": 23.23007583618164,
+      "max_time_ms": 27.216672897338867,
+      "tokens_per_sec": 10010.59871993884
+    },
+    "Long (512)": {
+      "seq_len": 512,
+      "avg_time_ms": 55.95118999481201,
+      "min_time_ms": 54.859161376953125,
+      "max_time_ms": 57.47389793395996,
+      "tokens_per_sec": 9150.833075176317
+    }
+  },
+  "generation": {
+    "prompt_len": 64,
+    "gen_tokens": 50,
+    "total_time_ms": 80.46698570251465,
+    "tokens_per_sec": 621.3728470561744,
+    "ms_per_token": 1.609339714050293
+  },
+  "memory": {
+    "rss_gb": 0.2696533203125,
+    "vms_gb": 0.6635627746582031
+  }
+}

@@ -4,7 +4,7 @@ Quantization utilities for faster inference
 
 import torch
 import torch.nn as nn
-from typing import Dict
+from typing import Dict, Tuple
 
 
 def quantize_int8(tensor: torch.Tensor) -> Tuple[torch.Tensor, float, float]:
