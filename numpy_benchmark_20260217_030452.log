@@ -1,0 +1,93 @@
+[03:04:52] ================================================================================
+[03:04:52] MiniLLM Architecture Benchmark (NumPy Simulation)
+[03:04:52] ================================================================================
+[03:04:52] Start time: 2026-02-17T03:04:52.215274
+[03:04:52] Python: 3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0]
+[03:04:52] NumPy: 2.4.2
+[03:04:52] 
+[03:04:52] Model Configuration:
+[03:04:52]   Vocab size: 1000
+[03:04:52]   Hidden size: 256
+[03:04:52]   Num layers: 4
+[03:04:52]   Num heads: 4
+[03:04:52]   Intermediate size: 512
+[03:04:52] 
+[03:04:52] Parameter Count:
+[03:04:52]   Embedding: 256,000
+[03:04:52]   Per layer: 655,360
+[03:04:52]   Total: 2,877,696 (2.88M)
+[03:04:52] 
+[03:04:52] ================================================================================
+[03:04:52] Matrix Operation Benchmarks
+[03:04:52] ================================================================================
+[03:04:52] 
+[03:04:52] Sequence Length: 64
+[03:04:52] ----------------------------------------
+[03:04:52]   Attention computation:
+[03:04:52]     Average time: 0.27 ms
+[03:04:52]     Min time: 0.20 ms
+[03:04:52]     FLOPS: 7.81 GFLOPS
+[03:04:52]   MLP computation:
+[03:04:52]     Average time: 0.42 ms
+[03:04:52]   Estimated full forward pass:
+[03:04:52]     Per layer: 0.69 ms
+[03:04:52]     Total (4 layers): 2.77 ms
+[03:04:52]     Throughput: 23144.2 tok/s
+[03:04:52] 
+[03:04:52] Sequence Length: 128
+[03:04:52] ----------------------------------------
+[03:04:52]   Attention computation:
+[03:04:52]     Average time: 0.95 ms
+[03:04:52]     Min time: 0.73 ms
+[03:04:52]     FLOPS: 8.79 GFLOPS
+[03:04:52]   MLP computation:
+[03:04:52]     Average time: 0.71 ms
+[03:04:52]   Estimated full forward pass:
+[03:04:52]     Per layer: 1.66 ms
+[03:04:52]     Total (4 layers): 6.65 ms
+[03:04:52]     Throughput: 19257.0 tok/s
+[03:04:52] 
+[03:04:52] Sequence Length: 256
+[03:04:52] ----------------------------------------
+[03:04:52]   Attention computation:
+[03:04:52]     Average time: 3.74 ms
+[03:04:52]     Min time: 2.63 ms
+[03:04:52]     FLOPS: 8.97 GFLOPS
+[03:04:52]   MLP computation:
+[03:04:52]     Average time: 4.68 ms
+[03:04:52]   Estimated full forward pass:
+[03:04:52]     Per layer: 8.42 ms
+[03:04:52]     Total (4 layers): 33.67 ms
+[03:04:52]     Throughput: 7602.9 tok/s
+[03:04:52] 
+[03:04:52] Sequence Length: 512
+[03:04:52] ----------------------------------------
+[03:04:52]   Attention computation:
+[03:04:52]     Average time: 13.55 ms
+[03:04:52]     Min time: 10.70 ms
+[03:04:52]     FLOPS: 9.90 GFLOPS
+[03:04:52]   MLP computation:
+[03:04:52]     Average time: 4.67 ms
+[03:04:52]   Estimated full forward pass:
+[03:04:52]     Per layer: 18.22 ms
+[03:04:52]     Total (4 layers): 72.90 ms
+[03:04:52]     Throughput: 7023.7 tok/s
+[03:04:52] 
+[03:04:52] ================================================================================
+[03:04:52] Memory Usage Estimation
+[03:04:52] ================================================================================
+[03:04:52] Seq 64: Model=0.01GB, KV=0.00GB, Total=0.01GB
+[03:04:52] Seq 128: Model=0.01GB, KV=0.00GB, Total=0.01GB
+[03:04:52] Seq 256: Model=0.01GB, KV=0.00GB, Total=0.01GB
+[03:04:52] Seq 512: Model=0.01GB, KV=0.00GB, Total=0.01GB
+[03:04:52] 
+[03:04:52] ================================================================================
+[03:04:52] Summary
+[03:04:52] ================================================================================
+[03:04:52] seq_64: 23144.2 tok/s
+[03:04:52] seq_128: 19257.0 tok/s
+[03:04:52] seq_256: 7602.9 tok/s
+[03:04:52] seq_512: 7023.7 tok/s
+[03:04:52] 
+[03:04:52] Note: This is a NumPy simulation. Actual PyTorch/CUDA performance will be higher.
+[03:04:52] End time: 2026-02-17T03:04:52.583140

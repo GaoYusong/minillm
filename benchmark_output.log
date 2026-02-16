@@ -1,0 +1,14 @@
+2026-02-17 03:03:28,967 - INFO - ================================================================================
+2026-02-17 03:03:28,967 - INFO - MiniLLM Real Benchmark - Full Test
+2026-02-17 03:03:28,967 - INFO - ================================================================================
+2026-02-17 03:03:28,967 - INFO - Start Time: 2026-02-17T03:03:28.967319
+2026-02-17 03:03:28,967 - INFO - Python Version: 3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0]
+2026-02-17 03:03:28,967 - INFO - ================================================================================
+2026-02-17 03:03:28,967 - INFO - Step 1: Importing Dependencies
+2026-02-17 03:03:28,967 - INFO - ================================================================================
+2026-02-17 03:03:28,967 - ERROR - ✗ PyTorch import failed: No module named 'torch'
+Traceback (most recent call last):
+  File "/root/.openclaw/workspace/minillm/benchmarks/run_full_benchmark.py", line 391, in <module>
+    results, log_content = run_benchmark()
+    ^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
